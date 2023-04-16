@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: (--complimentary-color);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+ --dominant-color: hsl(200, 24%, 93%);
+ --complimentary-color: #0D0D0D;
+ --accent-color: hsl(204, 95%, 41%);
+ --shadow-color: rgb(5, 124, 204, 0.12);
+ --shadow2-color: rgb(5, 124, 204, 0.32);
+}
+
+body{
+    background-color: var(--dominant-color);
+    /* font-family: 'Poppins', sans-serif; */
+    font-size: 1.1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.left-content {
+    height: 100vh;
+    width: 40vw;
+    /* border: 1px solid black; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7rem;
+}
+
+.content-wrapper{
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.text-container {
+    /* border: 2px solid blue; */
+    margin-right: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-weight: 800;
+    color: var(--complimentary-color);
+    font-size: 3.9rem;
+    letter-spacing: 2px;
+    line-height: 5rem;
+}
+
+.designation {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.description {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    color: var(--complimentary-color);
+    letter-spacing: 1px;
+}
+
+.download-cv {
+    /* border: 1px solid red ; */
+    /* text-align: right; */
+    text-decoration: none;
+    list-style: none;
+    height: 3rem;
+    margin-top: 1.8rem;
+}
+
+.download-cv > button {
+    color: var(--dominant-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border: none;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* padding: 18px 12px; */
+  color: white !important;
+  user-select: none;
+  width: fit-content;
+  word-break: break-word;
+    background-color: var(--accent-color);
+    height: 100%;
+    padding: 0.4rem 3rem;
+    /* border-radius: 10%; */
+}
+
+/* .circle-shape {
+    background-color: red;
+    width: 70%;
+    height: 40%;
+} */
+
+.image-container{
+    border-radius: 50%;
+    background-color: transparent;
+    /* background-color:  rgb(8, 0, 255); */
+    height: 30rem;
+    width: 30rem;
+    border-radius: 5px solid red;
+    /* height: 100%; */
+    position: relative;
+    /* box-shadow: #5E5DF0 0px 2px 4px 0px, #5E5DF0 0px 2px 16px 0px; */
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  /* z-index: -1; */
+}
+
+.hero {
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.active{
+    display: block !important;
+    animation: scaleDown 0.9s ease-in-out;
+}
+
+@keyframes scaleDown {
+    0%{
+        transform: translateY(-100%) scaleY(0)
+    }
+
+    100%{
+        transform: translateY(0) scaleY(1)
+    }
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+}
+
+.about-sec-wrapper {
+    width: 70vw;
+    margin: auto;
+}
+
+.portfolio-title {
+    color: var(--complimentary-color);
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.project-grid {
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    row-gap: 2.9rem;
+    column-gap: 2rem;
+}
+
+.card-container{
+    overflow: hidden;
+    height: 15rem;
+    box-shadow: var(--shadow-color) 0px 2px 4px 0px, var(--shadow2-color) 0px 2px 16px 0px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hover-card {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rebeccapurple;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(2px) saturate(140%);
+  }
+  
+  .card-container:hover .hover-card {
+    opacity: 1;
+  }
+
+
+.contact-wrapper {
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centre-content-wrapper {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 60vw;
+    width: 100%;
+}
+
+.contact-title {
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    border: 1px solid orchid;
+}
+
+.reach-out {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.ways-form-wrapper {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    border: 3px solid aqua;
+    margin: auto 0;
+    /* position: absolute; */
+    width: 100%;
+    height: 60vh;
+}
+
+.ways-to-contact {
+    border: 1px solid red;
+}
+
+.contact-form {
+    margin-left: 3rem;
+}
+
+.sec1{
+    /* background-color: blue; */
+}
+
+.sec2{
+}
+
+.sec3{
+}
+
+.sec4{
+    background-color: pink;
+}
+
+.sec5{
+}
+
+/* Controls */ 
+
+.controls {
+    right: 4%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    height: 100vh;
+    width: 3.5rem;
+}
+
+/* Common property of main page controll */
+.control {
+    margin: 0.9rem 0;
+    background-color: var(--dominant-color);
+    border-radius: 50%;
+    width: 3.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.3rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--complimentary-color);
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+}
+
+.activeNavBtn{
+    /* background-color: rgb(52, 52, 52); */
+    background-color: var(--dominant-color);
+    color: var(--accent-color);
+    /* border: 1.5px solid black; */
+    transition: all 0.9s ease-in-out;
+}
+
